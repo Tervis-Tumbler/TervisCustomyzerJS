@@ -1,0 +1,9 @@
+{
+  "name": "TervisCustomyzerJS",
+  "type": "module",
+  "main": "TervisCustomyzerJS.js",
+  "repository": {
+    "type": "git",
+    "url": "https://tervis.visualstudio.com/TervisCustomyzer/_git/TervisCustomyzerJS"
+  }
+}
