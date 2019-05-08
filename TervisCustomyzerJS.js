@@ -3,8 +3,6 @@ import { Add_MemberScriptProperty, New_HashTableIndex } from '../TervisUtilityJS
 export function Get_CustomyzerPrintImageTemplateSizeAndFormType ({
     $PrintImageTemplateName
 }) {
-    // Possible improvements
-    //https://stackoverflow.com/questions/17781472/how-to-get-a-subset-of-a-javascript-objects-properties
     let {Size, FormType} = $PrintImageTemplateNameToSizeAndFormTypeIndex[$PrintImageTemplateName]
     
     if (Array.isArray(FormType)) {
