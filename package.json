@@ -1,10 +1,14 @@
 {
-  "name": "terviscustomyzerjs",
+  "name": "@tervis/terviscustomyzerjs",
+  "version": "0.0.1",
   "type": "module",
   "main": "TervisCustomyzerJS.js",
   "repository": {
     "type": "git",
     "url": "https://tervis.visualstudio.com/TervisCustomyzer/_git/TervisCustomyzerJS"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@tervis/tervisutilityjs": "^0.0.1",
+    "@tervis/terviscustomyzercontstants": "^0.0.1"
+  }
 }
