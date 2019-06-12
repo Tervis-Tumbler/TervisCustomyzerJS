@@ -1,4 +1,4 @@
-import { Add_MemberScriptProperty, New_HashTableIndex } from '@tervis/tervisutilityjs'
+import { Add_MemberScriptProperty, New_HashTableIndex } from '@tervis/tervisutilityjs/TervisUtilityJS.js'
 import { Get_SizeAndFormTypeMetaData } from '@tervis/terviscustomyzercontstants'
 
 export async function Get_CustomyzerPrintImageTemplateSizeAndFormType ({
