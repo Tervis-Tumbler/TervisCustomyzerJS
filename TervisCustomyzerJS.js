@@ -1,5 +1,5 @@
 import { Add_MemberScriptProperty, New_HashTableIndex } from '@tervis/tervisutilityjs/TervisUtilityJS.js'
-import { Get_SizeAndFormTypeMetaData } from '@tervis/terviscustomyzercontstants'
+import { Get_SizeAndFormTypeMetaData, Get_ColorCodeToMarketingNameMapping } from '@tervis/terviscustomyzercontstants'
 
 export async function Get_CustomyzerPrintImageTemplateSizeAndFormType ({
     $PrintImageTemplateName
@@ -75,4 +75,13 @@ async function Get_PrintImageTemplateNameToSizeAndFormTypeIndex () {
         $PrintImageTemplateNameToSizeAndFormTypeIndex = New_HashTableIndex({ $InputObject: $SizeAndFormTypeMetaData, $PropertyToIndex: "PrintImageTemplateNames"})
     }
     return $PrintImageTemplateNameToSizeAndFormTypeIndex
+}
+
+var $ColorCodeToMarketingNameIndex
+export async function Get_ColorCodeToMarketingNameIndex () {
+    if (!$ColorCodeToMarketingNameIndex) {
+        var $ColorCodeToMarketingNameMapping = await Get_ColorCodeToMarketingNameMapping()
+        $ColorCodeToMarketingNameIndex = New_HashTableIndex({ $InputObject: $ColorCodeToMarketingNameMapping, $PropertyToIndex: "ColorCode"})
+    }
+    return $ColorCodeToMarketingNameIndex
 }
