@@ -1,4 +1,4 @@
-import { Add_MemberScriptProperty, New_HashTableIndex } from '@tervis/tervisutilityjs/TervisUtilityJS.js'
+import { Add_MemberScriptProperty, New_HashTableIndex, ConvertFrom_StringUsingRegexCaptureGroup } from '@tervis/tervisutilityjs/TervisUtilityJS.js'
 import { Get_SizeAndFormTypeMetaData, Get_ColorCodeToMarketingNameMapping } from '@tervis/terviscustomyzercontstants'
 
 export async function Get_CustomyzerPrintImageTemplateSizeAndFormType ({
@@ -85,3 +85,16 @@ export async function Get_ColorCodeToMarketingNameIndex () {
     }
     return $ColorCodeToMarketingNameIndex
 }
+
+export function Get_SizeAndFormTypeFromString ({
+    $String
+  }) {
+    var $Results = ConvertFrom_StringUsingRegexCaptureGroup({
+      $Regex: /(?<$Size>\d*)(?<$FormType>\w*)/u,
+      $String
+    })
+
+    if ($Results) {
+      return $Results
+    }
+  }
