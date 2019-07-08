@@ -31,11 +31,19 @@ export async function Get_CustomyzerImageTemplateName ({
     }
 }
 
-var $SizeAndFormTypeMetaData
 
+export async function Get_SizeAndFormTypeMetaDataUsingIndex ({
+    $Size,
+    $FormType
+}) {
+    var $SizeAndFormTypeToImageTemplateNamesIndex = await Get_SizeAndFormTypeToImageTemplateNamesIndex()
+    return $SizeAndFormTypeToImageTemplateNamesIndex[`${$Size}${$FormType}`]
+}
+
+var $SizeAndFormTypeMetaData
 async function Get_SizeAndFormTypeMetaDataWithCustomProperties () {
     if (!$SizeAndFormTypeMetaData) {
-        var $SizeAndFormTypeMetaData = await Get_SizeAndFormTypeMetaData()
+        $SizeAndFormTypeMetaData = await Get_SizeAndFormTypeMetaData()
 
         Add_MemberScriptProperty({$InputObject: $SizeAndFormTypeMetaData, $Name: "SizeAndFormTypes", $Value: function (){
             if (Array.isArray(this.FormType)) {
