@@ -1,5 +1,11 @@
 import { Add_MemberScriptProperty, New_HashTableIndex, ConvertFrom_StringUsingRegexCaptureGroup } from '@tervis/tervisutilityjs/TervisUtilityJS.js'
 import { Get_SizeAndFormTypeMetaData, Get_ColorCodeToMarketingNameMapping } from '@tervis/terviscustomyzercontstants'
+import {
+    New_TervisAdobeScene7CustomyzerArtboardImageURL,
+    New_TervisAdobeScene7URL,
+    New_TervisAdobeScene7WrapDecoration3TimesURL,
+    New_TervisAdobeScene7ProductVirtualURL
+} from '@tervis/tervisadobescene7js'
 
 export async function Get_CustomyzerPrintImageTemplateSizeAndFormType ({
     $PrintImageTemplateName
