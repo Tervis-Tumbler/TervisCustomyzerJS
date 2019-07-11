@@ -118,6 +118,8 @@ export async function New_CustomyzerProjectProductVirtualURL ({
     $Size,
     $FormType,
     $DecorationPositionXValue,
+    $Width,
+    $Height,
     $AsScene7SrcValue
 }) {
 
@@ -166,6 +168,8 @@ export async function New_CustomyzerProjectProductVirtualURL ({
         $DecorationSrc,
         $DecorationPositionXValue,
         $ElementPathsToShow,
+        $Width,
+        $Height,
         $AsScene7SrcValue
     })
 
