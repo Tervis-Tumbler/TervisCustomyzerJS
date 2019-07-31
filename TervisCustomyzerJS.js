@@ -62,11 +62,19 @@ async function Get_SizeAndFormTypeMetaDataWithCustomProperties () {
                 return `${this.Size}${this.FormType}`
             }
         }})
-        
+
         Add_MemberScriptProperty ({$InputObject: $SizeAndFormTypeMetaData, $Name: "PrintImageTemplateNames", $Value: function (){
             if (this.ImageTemplateName && this.ImageTemplateName.Print) {
                 return Object.values(this.ImageTemplateName.Print)
             }
+        }})
+
+        Add_MemberScriptProperty ({$InputObject: $SizeAndFormTypeMetaData, $Name: "DecorationProofAspectRatio", $Value: function (){
+            return this.PrintImageDimensions.Width / this.PrintImageDimensions.Height
+        }})
+
+        Add_MemberScriptProperty ({$InputObject: $SizeAndFormTypeMetaData, $Name: "DecorationProofHeightOnVirtual", $Value: function (){
+            return Math.round(this.DecorationProofWidthOnVirtual / this.DecorationProofAspectRatio)
         }})
     }
     return $SizeAndFormTypeMetaData
