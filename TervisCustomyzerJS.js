@@ -1,5 +1,5 @@
 import { Add_MemberScriptProperty, New_HashTableIndex, ConvertFrom_StringUsingRegexCaptureGroup } from '@tervis/tervisutilityjs/TervisUtilityJS.js'
-import { Get_SizeAndFormTypeMetaData, Get_ColorCodeToMarketingNameMapping } from '@tervis/terviscustomyzercontstants'
+import { Get_SizeAndFormTypeMetaData, Get_ColorCodeToMarketingNameMapping } from '@tervis/tervisproductsizeandformtypemetadata'
 import {
     New_TervisAdobeScene7CustomyzerArtboardImageURL,
     New_TervisAdobeScene7URL,
@@ -50,36 +50,6 @@ var $SizeAndFormTypeMetaData
 async function Get_SizeAndFormTypeMetaDataWithCustomProperties () {
     if (!$SizeAndFormTypeMetaData) {
         $SizeAndFormTypeMetaData = await Get_SizeAndFormTypeMetaData()
-
-        Add_MemberScriptProperty({$InputObject: $SizeAndFormTypeMetaData, $Name: "SizeAndFormTypes", $Value: function (){
-            if (Array.isArray(this.FormType)) {
-                var $SizeAndFormTypes = []
-                for (const $FromTypeInstance of this.FormType) {
-                    $SizeAndFormTypes.push(`${this.Size}${$FromTypeInstance}`)
-                }
-                return $SizeAndFormTypes
-            } else {
-                return `${this.Size}${this.FormType}`
-            }
-        }})
-
-        Add_MemberScriptProperty ({$InputObject: $SizeAndFormTypeMetaData, $Name: "PrintImageTemplateNames", $Value: function (){
-            if (this.ImageTemplateName && this.ImageTemplateName.Print) {
-                return Object.values(this.ImageTemplateName.Print)
-            }
-        }})
-
-        Add_MemberScriptProperty ({$InputObject: $SizeAndFormTypeMetaData, $Name: "DecorationProofAspectRatio", $Value: function (){
-            if (this.PrintImageDimensions) {
-                return this.PrintImageDimensions.Width / this.PrintImageDimensions.Height
-            }
-        }})
-
-        Add_MemberScriptProperty ({$InputObject: $SizeAndFormTypeMetaData, $Name: "DecorationProofHeightOnVirtual", $Value: function (){
-            if (this.DecorationProofAspectRatio) {
-                return Math.round(this.DecorationProofWidthOnVirtual / this.DecorationProofAspectRatio)
-            }
-        }})
     }
     return $SizeAndFormTypeMetaData
 }
