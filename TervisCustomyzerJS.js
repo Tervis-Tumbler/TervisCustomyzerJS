@@ -1,9 +1,12 @@
 import {
-    New_TervisAdobeScene7CustomyzerArtboardImageURL,
     New_TervisAdobeScene7URL,
     New_TervisAdobeScene7WrapDecoration3TimesURL,
     New_TervisAdobeScene7ProductVirtualURL
 } from '@tervis/tervisadobescene7js'
+
+import {
+    New_TervisAdobeScene7CustomyzerArtboardImageURL
+} from '@tervis/tervisadobescene7customyzerjs'
 
 export async function New_CustomyzerProjectProductVirtualURL ({
     $ProjectID,
