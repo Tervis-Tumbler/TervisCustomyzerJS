@@ -7,9 +7,5 @@
   "repository": {
     "type": "git",
     "url": "https://tervis.visualstudio.com/TervisCustomyzer/_git/TervisCustomyzerJS"
-  },
-  "dependencies": {
-    "@tervis/tervisutilityjs": "^0.1.0",
-    "@tervis/terviscustomyzercontstants": "^0.1.0"
   }
 }
