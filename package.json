@@ -1,6 +1,6 @@
 {
   "name": "@tervis/terviscustomyzerjs",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "type": "module",
   "unpkg": "TervisCustomyzerJS.js",
   "main": "TervisCustomyzerJS.js",
