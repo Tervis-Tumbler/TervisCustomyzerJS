@@ -6,7 +6,7 @@
   "main": "TervisCustomyzerJS.js",
   "repository": {
     "type": "git",
-    "url": "https://tervis.visualstudio.com/TervisCustomyzer/_git/TervisCustomyzerJS"
+    "url": "https://github.com/Tervis-Tumbler/TervisCustomyzerJS"
   },
   "dependencies": {
     "@tervis/terviscustomyzerservicejs": "^0.1.1"
