@@ -9,6 +9,6 @@
     "url": "https://github.com/Tervis-Tumbler/TervisCustomyzerJS"
   },
   "dependencies": {
-    "@tervis/terviscustomyzerservicejs": "^0.1.1"
+    "@tervis/terviscustomyzerservicejs": "^0.1.2"
   }
 }
